@@ -1,13 +1,88 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
 AllCops:
-  TargetRubyVersion: 2.6
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+  NewCops: enable
 
 Layout/LineLength:
-  Max: 120
+  Exclude: ["db/migrate/*.rb"]
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines_except_namespace
+
+Metrics/ModuleLength:
+  CountAsOne: ["array", "hash", "heredoc"]
+
+Metrics/ClassLength:
+  Max: 150
+  CountAsOne: ["array", "hash", "heredoc"]
+
+Metrics/MethodLength:
+  Max: 25
+  CountAsOne: ["array", "hash", "heredoc"]
+  Exclude:
+    - "config/routes/**/*.rb"
+    - "db/seeds/*.rb"
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Metrics/BlockLength:
+  Exclude: ["config/**/*.rb"]
+
+Metrics/CyclomaticComplexity:
+  Max: 18
+  Exclude: ["db/seeds/*.rb"]
+
+Metrics/PerceivedComplexity:
+  Max: 20
+  Exclude: ["db/seeds/*.rb"]
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
+Style/NumericLiterals:
+  Strict: true
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
