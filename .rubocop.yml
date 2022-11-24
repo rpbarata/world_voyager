@@ -1,16 +1,12 @@
 require:
   - rubocop-performance
-  - rubocop-rails
   - rubocop-rspec
-
-inherit_gem:
-  rubocop-shopify: rubocop.yml
 
 AllCops:
   NewCops: enable
 
 Layout/LineLength:
-  Exclude: ['db/migrate/*.rb']
+  Exclude: ["db/migrate/*.rb"]
 
 Layout/EmptyLinesAroundClassBody:
   EnforcedStyle: empty_lines
@@ -19,18 +15,18 @@ Layout/EmptyLinesAroundModuleBody:
   EnforcedStyle: empty_lines_except_namespace
 
 Metrics/ModuleLength:
-  CountAsOne: ['array', 'hash', 'heredoc']
+  CountAsOne: ["array", "hash", "heredoc"]
 
 Metrics/ClassLength:
   Max: 150
-  CountAsOne: ['array', 'hash', 'heredoc']
+  CountAsOne: ["array", "hash", "heredoc"]
 
 Metrics/MethodLength:
   Max: 25
-  CountAsOne: ['array', 'hash', 'heredoc']
+  CountAsOne: ["array", "hash", "heredoc"]
   Exclude:
-    - 'config/routes/**/*.rb'
-    - 'db/seeds/*.rb'
+    - "config/routes/**/*.rb"
+    - "db/seeds/*.rb"
 
 Metrics/AbcSize:
   Enabled: false
@@ -57,18 +53,15 @@ Style/WordArray:
   EnforcedStyle: brackets
 
 Metrics/BlockLength:
-  Exclude: ['config/**/*.rb']
-
-Rails/HasAndBelongsToMany:
-  Enabled: false
+  Exclude: ["config/**/*.rb"]
 
 Metrics/CyclomaticComplexity:
   Max: 18
-  Exclude: ['db/seeds/*.rb']
+  Exclude: ["db/seeds/*.rb"]
 
 Metrics/PerceivedComplexity:
   Max: 20
-  Exclude: ['db/seeds/*.rb']
+  Exclude: ["db/seeds/*.rb"]
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -82,19 +75,11 @@ Style/NumericLiterals:
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Rails/SkipsModelValidations:
-  Exclude:
-    - 'db/migrate/*.rb'
-    - 'db/seeds/*.rb'
-
 Layout/EndAlignment:
   EnforcedStyleAlignWith: start_of_line
 
 Layout/CaseIndentation:
   EnforcedStyle: end
-
-Rails/EnvironmentVariableAccess:
-  AllowReads: true
 
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
