@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['Rui Barata']
   spec.email = ['ruipbarata@gmail.com']
 
-  spec.summary = 'Write a short summary, because RubyGems requires one.'
-  spec.description = 'Write a longer description or delete this line.'
+  spec.summary = 'Simple list of countries and cities around the world.'
+  spec.description = 'It uses simplemaps database to provide a list of countries and cities around the world to use in your application.'
   spec.homepage = 'https://github.com/rpbarata/world_voyager'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'
